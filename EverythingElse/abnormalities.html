@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Abnormalities</title>
+  </head>
+
+  <body class="bg-gray-800 bg-fixed bg-top" onmouseover="HoverHandler(event)">
+    <!-- Because Background Transition -->
+    <div class="bg-gray-800 transition-all duration-500">
+      <!-- Main container for top bar -->
+      <div class="sticky top-0 left-0 right-0 backdrop-blur-md z-10">
+        <div class="bg-slate-900/50 hover:bg-slate-900/80">
+          <!-- Top Bar Contents -->
+          <div
+            class="max-w-[1440px] mx-auto flex flex-nowrap items-center px-4 py-2"
+          >
+            <!-- Logo -->
+            <div class="p-1">
+              <a href="../homepage.html">
+                <img
+                  src="./assets/OtherImages/logoCropped.png"
+                  class="h-16 w-32"
+              /></a>
+            </div>
+            <!-- Space in between-->
+            <div class="grow"></div>
+            <!-- Links -->
+            <div class="relative p-1 right-0 flex flex-row text-yellow-400">
+              <div class="p-1">
+                <a href="./about.html" class="px-4 py-2"> About </a>
+              </div>
+              <div class="p-1 text-yellow-600">
+                <a class="px-4 py-2"> Abnormalities </a>
+              </div>
+              <div class="p-1">
+                <a href="./music.html" class="px-4 py-2"> Music </a>
+              </div>
+              <div class="p-1">
+                <a href="./survey.html" class="px-4 py-2"> Survey </a>
+              </div>
+              <div class="py-1 pl-3 pr-1 text-slate-100">
+                <a
+                  href="https://store.steampowered.com/app/1256670/Library_Of_Ruina/"
+                  target="_blank"
+                  class="px-4 py-2 rounded-xl bg-green-700 hover:bg-green-500 after:content-['_↗']"
+                >
+                  Steam Page
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Title and Contents -->
+      <div class="z-0 text-slate-300 text-xl max-w-6xl mx-auto py-8" id="title">
+        <h1 class="text-5xl text-yellow-400 font-semibold py-3">
+          MEET THE ABNORMALITIES
+        </h1>
+        <!-- Top Description -->
+        <div id="contents">
+          <h2 class="text-4xl text-yellow-400 py-4">
+            Your friendly neighbourhood eldritch horrors beyond human
+            comprehension!
+          </h2>
+
+          <p class="py-4">
+            Abnormalities are the horrific sanity ending murder machines you
+            need to defeat to harness their power in order to obtain more books.
+            You know, once again like real life libraries.
+          </p>
+          <p>
+            To help you get started, we've provided a little introduction to
+            some of these mistakes of God. Happy reading!
+          </p>
+        </div>
+
+        <!-- Abnormality Cards -->
+        <div class="flex flex-col" onmouseover="HoverHandler(event)" id="abno">
+          <!-- Der Freischütz -->
+          <div
+            class="relative pt-16 z-0"
+            id="df"
+            onmouseover="HoverHandler(event)"
+          >
+            <a
+              href="https://www.goodreads.com/book/show/54270.Mein_Kampf"
+              target="_blank"
+              class="peer"
+              id="dfpic"
+            >
+              <img
+                src="./assets/Abnos/iconThings/derFrei.png"
+                class="h-60 relative"
+              />
+            </a>
+            <div
+              class="bg-gradient-to-b from-blue-900/60 to-black/60 max-w-2xl -mt-[7.5rem] ml-[14.8rem] -z-10 relative rounded-xl hidden peer-hover:block hover:block"
+              id="dfdesc"
+            >
+              <p class="px-8 pt-16">
+                -Freeshooter, dessen Kugeln immer ins Schwarze treffen. <br />
+                -Möglicherweise rassistisch. <br />
+              </p>
+              <p class="p-8">
+                Verschwunden zwischen 1933 und 1945. Für das Vaterland!
+              </p>
+            </div>
+          </div>
+          <!-- Burrowing Heaven -->
+          <div class="relative z-0 self-end" id="bh">
+            <a
+              href="https://www.tumblr.com/blog/view/chickennuggetswrites/666079500835192832?source=share"
+              target="_blank"
+              class="peer"
+              id="bhpic"
+            >
+              <img
+                src="./assets/Abnos/iconThings/burrowingHeaven.png"
+                class="h-60 relative float-right"
+              />
+            </a>
+            <div
+              class="bg-gradient-to-b from-red-500/40 to-red-400/40 max-w-2xl -mt-[7.5rem] mr-[14.8rem] -z-10 relative rounded-xl hidden peer-hover:block hover:block float-right"
+              id="bhdesc"
+            >
+              <p class="px-8 pt-16">
+                -Really likes being looked at ( ͡º ͜ʖ ͡º) <br />
+                -Wants to hog all your attention <br />-Will actively murder you
+                if you look at others <br />
+              </p>
+              <p class="p-8">
+                Basically an eldritch abomination that is also yandere (manga
+                adaptation when?)
+              </p>
+            </div>
+          </div>
+          <!-- Blue Star -->
+          <div class="relative z-0" id="bs" onmouseover="HoverHandler(event)">
+            <a
+              href="https://www.wikifeet.com/"
+              target="_blank"
+              class="peer"
+              id="bspic"
+            >
+              <img
+                src="./assets/Abnos/iconThings/blueStar.png"
+                class="h-60 relative"
+            /></a>
+            <div
+              class="bg-gradient-to-b from-blue-800/40 to-blue-700/40 max-w-2xl -mt-[7.5rem] ml-[14.8rem] -z-10 relative rounded-xl hidden peer-hover:block hover:block"
+              id="bsdesc"
+            >
+              <p class="px-8 pt-16">
+                -Straight up immortal <br />
+                -Has literally infinite worshippers <br />
+                -Just as hard to fight one-handed
+              </p>
+              <p class="p-8">
+                Essentially just pandering to their core audience; anyone
+                playing this game willingly is probably a foot fetishist too.
+              </p>
+            </div>
+          </div>
+
+          <!-- Whitenight -->
+          <div class="relative z-0 self-end" id="wn">
+            <a
+              href="https://www.heavensgate.com/"
+              target="_blank"
+              class="peer"
+              id="wnpic"
+            >
+              <img
+                src="./assets/Abnos/iconThings/whiteNight.png"
+                class="h-60 relative float-right"
+              />
+            </a>
+            <div
+              class="bg-gradient-to-b from-gray-500/40 to-gray-400/40 max-w-2xl -mt-[7.5rem] mr-[14.8rem] -z-10 relative rounded-xl hidden peer-hover:block hover:block float-right"
+              id="wndesc"
+            >
+              <p class="px-8 pt-16 text-red-700">
+                -He/Him (mind the capitalization, He gets sensitive about this)
+                <br />
+                -Literally, unironically, God <br />
+                -has 12 Apostles to serve Him and do His bidding <br />
+                -Epic 90 minute battle <br />
+              </p>
+              <p class="p-8 text-red-700">
+                Ravages and insta-kills most of your fighters only to be
+                backstabbed and die to an imposter; possibly a reference to hit
+                indie multiplayer mobile game Among Us
+              </p>
+            </div>
+          </div>
+          <!-- Punishing Bird -->
+          <div
+            class="relative z-0 mb-64"
+            id="pb"
+            onmouseover="HoverHandler(event)"
+          >
+            <a
+              href="https://imgur.com/a/H60kM8n"
+              target="_blank"
+              class="peer"
+              id="pbpic"
+            >
+              <img
+                src="./assets/Abnos/iconThings/punishingBird.png"
+                class="h-60 relative"
+              />
+            </a>
+            <div
+              class="bg-gradient-to-b from-yellow-700 to-black/60 max-w-2xl -mt-[7.5rem] ml-[14.8rem] -z-10 relative rounded-xl hidden peer-hover:block hover:block"
+              id="pbdesc"
+            >
+              <p class="px-8 pt-16">
+                -is smol <br />
+                -is borb
+              </p>
+              <p class="p-8">
+                smol borb. <br />
+                btw the abnormalities on this page are arranged in ascending
+                order of how much damage they can deal
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="abnormalities.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Masochism Survey</title>
+  </head>
+
+  <body class="bg-gray-800">
+    <!-- Main container for top bar -->
+    <div class="sticky top-0 left-0 right-0 backdrop-blur-md z-10">
+      <div class="bg-slate-900/50 hover:bg-slate-900/80">
+        <!-- Top Bar Contents -->
+        <div
+          class="max-w-[1440px] mx-auto flex flex-nowrap items-center px-4 py-2"
+        >
+          <!-- Logo -->
+          <div class="p-1">
+            <a href="../homepage.html">
+              <img src="./assets/OtherImages/logoCropped.png" class="h-16 w-32"
+            /></a>
+          </div>
+          <!-- Space in between-->
+          <div class="grow"></div>
+          <!-- Links -->
+          <div class="relative p-1 right-0 flex flex-row text-yellow-400">
+            <div class="p-1">
+              <a href="./about.html" class="px-4 py-2"> About </a>
+            </div>
+            <div class="p-1">
+              <a href="./abnormalities.html" class="px-4 py-2">
+                Abnormalities
+              </a>
+            </div>
+            <div class="p-1">
+              <a href="./music.html" class="px-4 py-2"> Music </a>
+            </div>
+            <div class="p-1 text-yellow-600">
+              <a class="px-4 py-2"> Survey </a>
+            </div>
+            <div class="py-1 pl-3 pr-1 text-slate-100">
+              <a
+                href="https://store.steampowered.com/app/1256670/Library_Of_Ruina/"
+                target="_blank"
+                class="px-4 py-2 rounded-xl bg-green-700 hover:bg-green-500 after:content-['_↗']"
+              >
+                Steam Page
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Title and Contents -->
+    <div class="z-0 text-slate-300 text-xl max-w-6xl mx-auto py-8" id="title">
+      <h1 class="text-5xl text-yellow-400 font-semibold py-3">SURVEY</h1>
+      <!-- Remaining Page Contents -->
+      <div id="contents">
+        <h2 class="text-4xl text-yellow-400 py-4">
+          Should you play Library of Ruina?
+        </h2>
+
+        <p class="py-4">
+          Such is the nature of existential questions we ask ourselves everyday.
+          <br />
+          Luckily for you, we have created a neat little survey that can help
+          you make this very important decision! <br />
+          Just go through the questions given below, and select "YES" only if
+          your answer to every single question is Yes, and "NO" otherwise.
+        </p>
+
+        <ul class="list-disc py-4 text-base">
+          <li>
+            Do you like strategy games that make you think for ages before every
+            move?
+          </li>
+          <li>Really hard games that require several attempts per level?</li>
+          <li>
+            Really long games that take over 100 hours to beat, with levels that
+            last more than 90 minutes?
+          </li>
+          <li>
+            Games with Gacha type mechanics where there's only a small chance
+            you'll get what you need after beating a level, except there's no
+            in-app payments so the only option if you fail is to replay the
+            level?
+          </li>
+        </ul>
+        <form
+          class="text-base text-center flex flex-col"
+          onsubmit="FormHandler(); return false"
+        >
+          <label for="masochism-level-select"> Your Answer:</label>
+          <select
+            name="masochism"
+            id="masochism-level-select"
+            class="bg-inherit border-2 border-slate-300 w-20 mx-auto backdrop-blur-md"
+          >
+            <option value="no" class="text-slate-700">No</option>
+            <option value="yes" class="text-slate-700">Yes</option>
+          </select>
+          <div class="py-2">
+            <button
+              type="submit"
+              class="py-1 text-xl text-yellow-400 backdrop-blur-md border-2 border-yellow-400 w-24 rounded-lg mx-auto font-semibold"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="survey.js"></script>
+  </body>
+</html>

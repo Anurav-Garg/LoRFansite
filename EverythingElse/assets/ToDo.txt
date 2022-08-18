@@ -1,0 +1,4 @@
+Possibly make loading animations for form submissions
+Possibly make URLs fishy
+Possibly mess with colour schemes more
+Fix Top bar when small screen

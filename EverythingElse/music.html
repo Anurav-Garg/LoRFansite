@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The OST</title>
+  </head>
+
+  <body
+    class="bg-[url('./assets/Music/Backgrounds/lovetown.png')] bg-fixed bg-top bg-cover backdrop-brightness-50"
+    onload="loadHandler()"
+  >
+    <!-- To make the damn background work -->
+    <div class="bg-gray-800 transition-all duration-500">
+      <!-- Main container for top bar -->
+      <div class="sticky top-0 left-0 right-0 backdrop-blur-md z-10">
+        <div class="bg-slate-900/50 hover:bg-slate-900/80">
+          <!-- Top Bar Contents -->
+          <div
+            class="max-w-[1440px] mx-auto flex flex-nowrap items-center px-4 py-2"
+          >
+            <!-- Logo -->
+            <div class="p-1">
+              <a href="../homepage.html">
+                <img
+                  src="./assets/OtherImages/logoCropped.png"
+                  class="h-16 w-32"
+              /></a>
+            </div>
+            <!-- Space in between-->
+            <div class="grow"></div>
+            <!-- Links -->
+            <div class="relative p-1 right-0 flex flex-row text-yellow-400">
+              <div class="p-1">
+                <a href="./about.html" class="px-4 py-2"> About </a>
+              </div>
+              <div class="p-1">
+                <a href="./abnormalities.html" class="px-4 py-2">
+                  Abnormalities
+                </a>
+              </div>
+              <div class="p-1 text-yellow-600">
+                <a class="px-4 py-2"> Music </a>
+              </div>
+              <div class="p-1">
+                <a href="./survey.html" class="px-4 py-2"> Survey </a>
+              </div>
+              <div class="py-1 pl-3 pr-1 text-slate-100">
+                <a
+                  href="https://store.steampowered.com/app/1256670/Library_Of_Ruina/"
+                  target="_blank"
+                  class="px-4 py-2 rounded-xl bg-green-700 hover:bg-green-500 after:content-['_↗']"
+                >
+                  Steam Page
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Title and Contents -->
+      <div class="z-0 text-slate-300 text-xl max-w-6xl mx-auto py-8" id="title">
+        <h1 class="text-5xl text-yellow-400 font-semibold py-3">MUSIC</h1>
+        <!-- Title and top description -->
+        <div id="contents">
+          <h2 class="text-4xl text-yellow-400 py-4">
+            Violins and Violence; truly a match made in heaven
+          </h2>
+          <p class="py-4">
+            The music is basically the only reason I know this game exists. You
+            <strong> will </strong> listen to it, and you
+            <strong class="font-extrabold"> will </strong> enjoy it. Consider
+            this a threat.
+          </p>
+          <p>
+            Library of Ruina features several (five (5(५))) lyrical
+            lore-appropriate boss battle themes, each of which depict the boss'
+            story (usually involving losing a loved one and being generally
+            unhappy about) and emotions (basically always sorrow, this isn't a
+            very happy game) in its own unique way. Great for drowning out the
+            unceasing voices! <br />
+            And this is not even counting the various instrumental themes for
+            the rest of the battles! The system that decides which instrumental
+            theme plays at what time is so fucked up it took me several of hours
+            of gameplay to understand.
+          </p>
+          <p class="py-4">...anyway here are the boss songs:</p>
+        </div>
+        <!-- Songs -->
+        <div class="pt-2" id="songs"></div>
+        <!-- User Opinion Form -->
+        <div class="pt-16 pb-16" id="opinion">
+          <h3 class="text-3xl py-4">Your Thoughts: Survey</h3>
+          <p>
+            It goes without saying really but I'm sure by now you're too
+            convinced that Library of Ruina has the greatest OST ever conceived.
+            To be sure, though, we are hosting a survey, and would like you to
+            fill in the form below as truthfully as possible! 😇
+          </p>
+          <form
+            class="text-base text-center flex flex-col pt-8"
+            onsubmit="FormHandler(); return false"
+          >
+            <label for="hitlist-priority-select" class="pb-4">
+              Do you agree that Library of Ruina has the best OST in any game
+              ever?
+            </label>
+            <select
+              name="hitlist"
+              id="hitlist-priority-select"
+              class="bg-inherit border-2 border-slate-300 w-20 mx-auto backdrop-blur-md"
+              onchange="FormChangeHandler()"
+            >
+              <option value="yes" class="text-slate-700" selected="true">
+                Yes
+              </option>
+              <option value="no" class="text-slate-700">No</option>
+            </select>
+
+            <div id="coords" class="pt-8 hidden">
+              <label class="py-4"
+                >Please enter your exact coordinates with as much precision as
+                you are able to provide 😇</label
+              >
+              <div class="flex justify-center items-center pt-4">
+                <div class="flex flex-col justify-center items-center px-16">
+                  <label>Your Latitude (in degrees, b/w -90 and 90 ):</label>
+                  <input
+                    class="bg-inherit border-2 border-slate-300 w-20 text-lg"
+                    id="latitude"
+                  />
+                </div>
+                <div class="flex flex-col justify-center items-center px-16">
+                  <label>Your Longitude (in degrees, b/w -180 and 180 ):</label>
+                  <input
+                    class="bg-inherit border-2 border-slate-300 w-20 text-lg"
+                    id="longitude"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="py-2">
+              <button
+                type="submit"
+                class="py-1 text-xl text-yellow-400 backdrop-blur-md border-2 border-yellow-400 w-24 rounded-lg mx-auto font-semibold"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./music.js"></script>
+    <script src="./musicLoader.js"></script>
+  </body>
+</html>
